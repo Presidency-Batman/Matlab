@@ -1,0 +1,9 @@
+MATLAB CODE 4
+clc
+clear 
+close all
+syms x
+disp('the function is');
+f=sin(exp(sin(2*x)))
+disp('the derivative of the function is');
+derivative=diff(f,x)
