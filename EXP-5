@@ -1,0 +1,22 @@
+
+MATLAB CODE 5 (TAYLORS SERIES)
+i)SINGLE VARIABLE
+
+clc
+clear
+close all
+syms x
+t1=taylor(exp(x))
+t2=taylor(sin(x))
+t3=taylor(log(sin(x)),x,2)
+t4=taylor(log(x),x,'expansion point',2)
+
+ii)TWO VARIABLE
+
+clc
+clear
+close all
+syms x y
+f=(x^2)*(y+3)*(y-2)
+t1=taylor(f,[x,y],[1,-2],'order',10)
+pretty(t1)
