@@ -1,0 +1,9 @@
+MATLAB CODE 8
+clc
+clear 
+close all
+disp('the cauchy equation is');
+syms y(x)
+ode=2*x^2*diff(y,x,2)+3*x*dff(y,x)-y==0
+disp('solution of given equation');
+ysol(x)=dsolve(ode)
