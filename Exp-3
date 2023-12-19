@@ -1,0 +1,19 @@
+MATLAB CODE 3
+clc
+clear
+close all
+n=input('enter the order of square matrix');
+disp('enter the elements of coefficient matrix');
+for i=1:n
+ for j=1:n
+  A(i,j)=input('');
+end
+end
+trace=trace(A)
+determinant=det(A)
+disp('the characterstic equation is');
+p=poly(A)
+disp('the eigen values are');
+eigenvalues=eig(A)
+disp('the eigen values are');
+[X,D]=eig(A)
