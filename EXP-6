@@ -1,0 +1,32 @@
+MATLAB CODE 6(MAXIMA ND MINIMA)
+clc
+clear
+close all
+syms x y real
+f=input('enter the function f(x,y):');
+fx=diff(f,x);
+fy=diff(f,y);
+[X,Y]=solve(fx==0,fy==0,[x,y]);
+A=diff(fx,x);
+B=diff(fx,y);
+C=diff(fy,y);
+D=A*C-B^2;
+
+for i=1:length(x)
+d=subs(D,{x,y},{X(i),Y(i)});
+a=subs(A,(x,y},{X(i),Y(i)});
+f_value=subs(f,{x,y},{X(i),Y(i)});
+
+if d>0 and a<0
+fprintf('maximum at a point (%d,%d)and maximum value is %d\n',[X(i),Y(i)],f_value);
+
+else if d>0 and a>0
+fprintf('minimum at a point (%d,%d) and minimum value is %d\n',[X(i),Y(i)],f_value);
+
+else if d<0
+fprintf('sadde point is (%d,%d)\n'[X(i),Y(i)]);
+
+else
+fprintf('no conclusion can be drawn for (%d,%d)\n',[X(i),Y(i)];
+end
+end
