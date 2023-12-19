@@ -1,0 +1,33 @@
+MATLAB CODE 2
+clc 
+clear 
+close all
+n=input('enter the number of equations');
+m=input('enter the  number of unknowns');
+disp('enter the elemeents of matrix');
+for i=1:n
+ for j=1:n
+  A(i,j)=input('');
+end
+end
+disp('enter the constant matrix');
+for i=1:n
+c(i)=input('')
+end
+B=C'
+if n!=m
+disp('the number of equations are not equal to number of unknowns hence it is not 
+possible to find solution by matrix inversion method');
+
+else if B==0
+disp('this is homogenous system of equations');
+disp('it has trival or infinitely many solutions');
+
+else if det(A)==0
+disp('it is not possible to find solution by matrix inversion method');
+
+else
+disp('the solution is:');
+X=inv(A)*B
+end
+
