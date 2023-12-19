@@ -1,0 +1,8 @@
+MATLAB CODE 7
+clc
+clear
+close all
+syms x;
+f=x^2*cos(x);
+area=int(f,-4,9)
+ezplot(f[-4,9])
